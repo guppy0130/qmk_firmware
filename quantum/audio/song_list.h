@@ -171,7 +171,7 @@
 #    define COIN_SOUND
 #endif
 #ifndef ONE_UP_SOUND
-#    define ONE_UP_SOUND
+#    define ONE_UP_SOUND /* https://github.com/qmk/qmk_firmware/pull/5905/files/c0b5455b2cdab304235782ed24f975c5a2cd005e#diff-08c1b00db7fdf7c32db9c4868f3c99ecL263 */
 #endif
 #ifndef SONIC_RING
 #    define SONIC_RING
