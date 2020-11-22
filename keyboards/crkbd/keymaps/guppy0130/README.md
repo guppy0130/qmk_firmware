@@ -1,14 +1,16 @@
 # guppy0130 crkbd layout
 
-Assuming you're coming from my planck keymap, this should work with minimal changes.
+Assuming you're coming from my Planck keymap, this should work with minimal changes.
 
-Also, since I broke my LEDs, I've disabled them. You should probably re-enable them if you have functioning LEDs. Grab them from someone else.
+Also, since I broke my LEDs, I've disabled them. You should probably re-enable them if you have functioning LEDs.
 
-I had to make the following tradeoffs between this map and the planck due to the key layouts:
+Media keys had to be remapped to a different layer due to the lack of keys. That's okay, though, because now I can remap _that_ to Vim-like bindings as well!
 
-* no arrow keys means `hjkl` arrows, but that interferes with F6 and F12.
-    * you'll also notice that the `MINS` key to the end of that row is off by one compared to the planck.
-* media keys had to be remapped to a different layer due to the lack of keys. That's okay, though, because now I can remap _that_ to vim-like bindings as well!
+## `GAME` Mode
+
+`ADJUST` to access `GAME_ON`.
+
+To exit back to the default layer, `GAME_OF`. Note that I haven't yet figured out how to get the Corne to change the OLED display to say `GAME`, which would be helpful.
 
 ## Layout
 
@@ -17,11 +19,11 @@ L0
 .-----------------------------------------------------.                    .-----------------------------------------------------.
 |     ESC|       Q|       W|       E|       R|       T|                    |       Y|       U|       I|       O|       P|    BSPC|
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-| SFT/TAB|       A|       S|       D|       F|       G|                    |       H|       J|       K|       L|    SCLN|    QUOT|
+|LSFT/TAB|       A|       S|       D|       F|       G|                    |       H|       J|       K|       L|    SCLN|    QUOT|
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 |    LCTL|       Z|       X|       C|       V|       B|                    |       N|       M|    COMM|     DOT|    SLSH|     ENT|
 '--------+--------+--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------+--------+--------'
-                                    |    LGUI|   GRAVE|  LOWER |  |  RAISE |     SPC|    RALT|
+                                    |    LGUI|   GRAVE|   LOWER|  |   RAISE|     SPC|    RALT|
                                     `--------------------------'  `--------------------------'
 
 LOWER
@@ -32,7 +34,7 @@ LOWER
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 |    LCTL|      F7|      F8|      F8|     F10|     F11|                    |     F12|    HOME| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|
 '--------+--------+--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------+--------+--------'
-                                    |    LGUI|   GRAVE|  LOWER |  |  RAISE |     SPC|    RALT|
+                                    |    LGUI|   GRAVE|   LOWER|  |   RAISE|     SPC|    RALT|
                                     `--------------------------'  `--------------------------'
 
 RAISE
@@ -43,17 +45,28 @@ RAISE
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 |    LCTL| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|                    | XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|
 '--------+--------+--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------+--------+--------'
-                                    |    LGUI|   GRAVE|  LOWER |  |  RAISE |     SPC|    RALT|
+                                    |    LGUI|   GRAVE|   LOWER|  |   RAISE|     SPC|    RALT|
                                     `--------------------------'  `--------------------------'
 
 ADJUST = LOWER + RAISE
 .-----------------------------------------------------.                    .-----------------------------------------------------.
-|   SLEEP|   RESET| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|                    | XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|
+|   SLEEP|   RESET| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|                    | XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| GAME_ON|
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 |    LSFT| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|                    |    LEFT|    DOWN|      UP|    RGHT| XXXXXXX| XXXXXXX|
 |--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 |    LCTL| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|                    | XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX| XXXXXXX|
 '--------+--------+--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------+--------+--------'
-                                    |    LGUI|   GRAVE|  LOWER |  |  RAISE |     SPC|    RALT|
+                                    |    LGUI|   GRAVE|   LOWER|  |   RAISE|     SPC|    RALT|
+                                    `--------------------------'  `--------------------------'
+
+GAMES = GAME_ON
+.-----------------------------------------------------.                    .-----------------------------------------------------.
+|     ESC|       Q|       W|       E|       R|       T|                    |       Y|       U|       I|       O|       P|    BSPC|
+|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+|     TAB|       A|       S|       D|       F|       G|                    |       H|       J|       K|       L|    SCLN| GAME_OF|
+|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+|    LCTL|       Z|       X|       C|       V|       B|                    |       N|       M|    COMM|     DOT|    SLSH|     ENT|
+'--------+--------+--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------+--------+--------'
+                                    |   GRAVE|     SPC|     SPC|  |    RALT|     SPC|        |
                                     `--------------------------'  `--------------------------'
 ```
