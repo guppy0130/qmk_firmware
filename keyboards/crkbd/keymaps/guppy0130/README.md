@@ -6,6 +6,20 @@ Also, since I broke my LEDs, I've disabled them. You should probably re-enable t
 
 Media keys had to be remapped to a different layer due to the lack of keys. That's okay, though, because now I can remap _that_ to Vim-like bindings as well!
 
+## Compile
+
+```console
+$ docker run --rm -v ${pwd}:/qmk_firmware -w /qmk_firmware -it qmkfm/base_container make crkbd/rev1/common:guppy0130 SKIP_GIT=true
+
+Making crkbd/rev1/common with keymap guppy0130
+...
+```
+
+
+## Luna
+
+[Has Luna](https://www.reddit.com/r/olkb/comments/lmtgxc/introducing_luna_the_qmk_keyboard_pet/)
+
 ## `GAME` Mode
 
 `ADJUST` to access `GAME_ON`.
@@ -14,7 +28,7 @@ To exit back to the default layer, `GAME_OF`. Note that I haven't yet figured ou
 
 ## Layout
 
-```
+```text
 L0
 .-----------------------------------------------------.                    .-----------------------------------------------------.
 |     ESC|       Q|       W|       E|       R|       T|                    |       Y|       U|       I|       O|       P|    BSPC|
